@@ -10,6 +10,8 @@ android {
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+
+//        multiDexEnabled true
     }
 
     buildTypes {
@@ -27,6 +29,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.0'
+    compile 'com.android.support:multidex:1.0.0'
 }
 
 afterEvaluate {
@@ -37,7 +40,7 @@ afterEvaluate {
             dx.additionalParameters = []
         }
         dx.additionalParameters += '--multi-dex'
-        dx.additionalParameters += '--main-dex-list=main_dex_classes.list'
+        dx.additionalParameters += "--main-dex-list=$project.projectDir/main_dex_classes.list".toString()
         dx.additionalParameters += '--minimal-main-dex'
     }
 }
