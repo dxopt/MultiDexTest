@@ -14,7 +14,7 @@ Reproduce environment
 5. SDK platform-tools: 21
 6. Ubuntu & Android Studio 0.9.1
 
-Bug descrition
+Bug description
 ============
 
 In latest SDK build tools, we can use the dx parameters '--multi-dex' & '--main-dex-list' & '--minimal-main-dex' to generate and control multiple dex files in APK. If these parameters were used, the expected dex files will be generated, it's great. But in the final APK, the dex files' names were changed.
@@ -33,11 +33,11 @@ BUILD SUCCESSFUL
 Total time: 38.889 secs
 [PWD: ~/work/tyc/ycdev/demos/MultiDexTest/app]  (master)
 $ ll build/intermediates/dex/debug/
-总用量 4280
-drwxrwxr-x 2 yongce yongce    4096 11月  6 00:16 ./
-drwxrwxr-x 3 yongce yongce    4096 11月  6 00:16 ../
--rw-rw-r-- 1 yongce yongce  874148 11月  6 00:16 classes2.dex
--rw-rw-r-- 1 yongce yongce 3494932 11月  6 00:16 classes.dex
+脳脺脫脙脕驴 4280
+drwxrwxr-x 2 yongce yongce    4096 11脭脗  6 00:16 ./
+drwxrwxr-x 3 yongce yongce    4096 11脭脗  6 00:16 ../
+-rw-rw-r-- 1 yongce yongce  874148 11脭脗  6 00:16 classes2.dex
+-rw-rw-r-- 1 yongce yongce 3494932 11脭脗  6 00:16 classes.dex
 [PWD: ~/work/tyc/ycdev/demos/MultiDexTest/app]  (master)
 $ unzip -l build/outputs/apk/app-debug.apk | grep ".dex"
    874148  2014-11-06 00:16   classes.dex
